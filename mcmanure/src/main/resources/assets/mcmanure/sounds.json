@@ -1,0 +1,23 @@
+{
+  "flatus": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "mcmanure:entity/flatus",
+        "volume": 0.5,
+        "pitch": 0.5
+      },
+      {
+        "name": "mcmanure:entity/flatus",
+        "volume": 0.5,
+        "pitch": 0.3
+      },
+      {
+        "name": "mcmanure:entity/flatus",
+        "volume": 0.5,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "Prrt!"
+  }
+}

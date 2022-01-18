@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mcmanure:cow_manure"
+  },
+  "result": "mcmanure:dried_cow_manure",
+  "experience": 0.5,
+  "cookingTime": 60
+}
