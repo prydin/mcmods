@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class PoopingCow extends Cow {
   private static final int POOP_INTERVAL = 5 * 60 * 20; // 5 minutes
   private static final Logger LOGGER = LogManager.getLogger();
-  public int poopTime = this.random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
+  public int poopTime = random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
 
   public PoopingCow(final EntityType<? extends Cow> type, final Level level) {
 
@@ -25,10 +25,10 @@ public class PoopingCow extends Cow {
   @Override
   public void aiStep() {
     super.aiStep();
-    if (!this.level.isClientSide && this.isAlive() && --this.poopTime <= 0) {
-      this.playSound(SoundInit.FLATUS.get(), 1.0F, 1.0F);
-      this.spawnAtLocation(ItemsInit.COW_MANURE_ITEM.get());
-      this.poopTime = this.random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
+    if (!level.isClientSide && isAlive() && --poopTime <= 0) {
+      playSound(SoundInit.FLATUS.get(), 1.0F, 1.0F);
+      spawnAtLocation(ItemsInit.COW_MANURE_ITEM.get());
+      poopTime = random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
       LOGGER.debug("Generated manure. Next manure generation in " + poopTime + " ticks");
     }
   }

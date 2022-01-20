@@ -11,7 +11,7 @@ import nu.rydin.mcmanure.utils.Helpers;
 
 public class PoopingChicken extends Chicken {
   private static final int POOP_INTERVAL = 5 * 60 * 20; // 5 minutes
-  public int poopTime = this.random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
+  public int poopTime = random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
 
   public PoopingChicken(final EntityType<? extends Chicken> entityType, final Level level) {
     super(entityType, level);
@@ -20,10 +20,10 @@ public class PoopingChicken extends Chicken {
   @Override
   public void aiStep() {
     super.aiStep();
-    if (!this.level.isClientSide && this.isAlive() && --this.poopTime <= 0) {
-      this.playSound(SoundInit.CHICKEN_FERTILIZE.get(), 1.0F, 2.0F);
-      Helpers.mobApplyFertilizer(this.getLevel(), this.getOnPos());
-      poopTime = this.random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
+    if (!level.isClientSide && isAlive() && !isBaby() && --poopTime <= 0) {
+      playSound(SoundInit.CHICKEN_FERTILIZE.get(), 1.0F, 2.0F);
+      Helpers.mobApplyFertilizer(getLevel(), getOnPos());
+      poopTime = random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
     }
   }
 
