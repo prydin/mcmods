@@ -19,7 +19,7 @@ public class PoopingCow extends Cow {
   public PoopingCow(final EntityType<? extends Cow> type, final Level level) {
 
     super(type, level);
-    LOGGER.info("Cow created. Next manure generation in " + poopTime + " ticks");
+    LOGGER.debug("Cow created. Next manure generation in " + poopTime + " ticks");
   }
 
   @Override
@@ -29,7 +29,7 @@ public class PoopingCow extends Cow {
       this.playSound(SoundInit.FLATUS.get(), 1.0F, 1.0F);
       this.spawnAtLocation(ItemsInit.COW_MANURE_ITEM.get());
       this.poopTime = this.random.nextInt(POOP_INTERVAL) + POOP_INTERVAL;
-      LOGGER.info("Generated manure. Next manure generation in " + poopTime + " ticks");
+      LOGGER.debug("Generated manure. Next manure generation in " + poopTime + " ticks");
     }
   }
 

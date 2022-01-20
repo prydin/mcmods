@@ -1,5 +1,6 @@
 package nu.rydin.mcmanure.client.events;
 
+import net.minecraft.client.renderer.entity.ChickenRenderer;
 import net.minecraft.client.renderer.entity.CowRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -16,5 +17,6 @@ public class ClientEvents {
   @SubscribeEvent
   public static void onRegisterRenderer(final EntityRenderersEvent.RegisterRenderers e) {
     e.registerEntityRenderer(EntityInit.POOPING_COW.get(), CowRenderer::new);
+    e.registerEntityRenderer(EntityInit.POOPING_CHICKEN.get(), ChickenRenderer::new);
   }
 }

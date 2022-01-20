@@ -16,6 +16,11 @@ public class SoundInit {
       SOUNDS.register(
           "flatus", () -> new SoundEvent(new ResourceLocation(MCManure.MOD_ID, "flatus")));
 
+  public static RegistryObject<SoundEvent> CHICKEN_FERTILIZE =
+      SOUNDS.register(
+          "chicken_fertilize",
+          () -> new SoundEvent(new ResourceLocation(MCManure.MOD_ID, "chicken_fertilize")));
+
   public static void init() {
     SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
   }

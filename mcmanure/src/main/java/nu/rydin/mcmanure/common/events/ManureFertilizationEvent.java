@@ -26,7 +26,7 @@ public class ManureFertilizationEvent {
 
     final Player player = e.getPlayer();
     final BlockPos cpos = e.getPos();
-    if (Helpers.applyFertilizer(itemstack, world, cpos, player)) {
+    if (Helpers.playerApplyFertilizer(itemstack, world, cpos, player)) {
       world.levelEvent(2005, cpos, 0);
       player.swing(e.getHand());
     }

@@ -1,23 +1,44 @@
 {
   "flatus": {
-    "category": "neutral",
+    "category": "normal",
     "sounds": [
       {
         "name": "mcmanure:entity/flatus",
-        "volume": 0.5,
+        "volume": 0.1,
         "pitch": 0.5
       },
       {
         "name": "mcmanure:entity/flatus",
-        "volume": 0.5,
+        "volume": 0.1,
         "pitch": 0.3
       },
       {
         "name": "mcmanure:entity/flatus",
+        "volume": 0.1,
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "Manure generated"
+  },
+  "chicken_fertilize": {
+    "category": "normal",
+    "sounds": [
+      {
+        "name": "mcmanure:entity/chicken_fertilize",
+        "volume": 0.5,
+        "pitch": 0.5
+      },
+      {
+        "name": "mcmanure:entity/chicken_fertilize",
+        "volume": 0.5,
+        "pitch": 0.3
+      },
+      {
+        "name": "mcmanure:entity/chicken_fertilize",
         "volume": 0.5,
         "pitch": 0.7
       }
     ],
-    "subtitle": "Prrt!"
+    "subtitle": "Chicken applied fertilizer"
   }
 }
