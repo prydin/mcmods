@@ -25,8 +25,14 @@ public class ItemsInit {
   public static final RegistryObject<BaseItem> COW_MANURE_ITEM =
       ITEMS.register("cow_manure", BaseItem::new);
 
+  public static final RegistryObject<BaseItem> HORSE_MANURE_ITEM =
+      ITEMS.register("horse_manure", BaseItem::new);
+
   public static final RegistryObject<BaseItem> DRIED_COW_MANURE_ITEM =
       ITEMS.register("dried_cow_manure", () -> new FuelItem(300));
+
+  public static final RegistryObject<BaseItem> DRIED_HORSE_MANURE_ITEM =
+      ITEMS.register("dried_horse_manure", () -> new FuelItem(300));
 
   public static final RegistryObject<ForgeSpawnEggItem> COW_SPAWN_EGG =
       VANILLA_ITEMS.register(
@@ -49,6 +55,19 @@ public class ItemsInit {
                   EntityInit.POOPING_CHICKEN,
                   0xA1A1A1,
                   0xFF0000,
+                  new Item.Properties()
+                      .tab(CreativeModeTab.TAB_MISC)
+                      .stacksTo(64)
+                      .rarity(Rarity.COMMON)));
+
+  public static final RegistryObject<ForgeSpawnEggItem> HORSE_SPAWN_EGG =
+      VANILLA_ITEMS.register(
+          "horse_spawn_egg",
+          () ->
+              new ForgeSpawnEggItem(
+                  EntityInit.POOPING_HORSE,
+                  0xC09E7D,
+                  0xEEE500,
                   new Item.Properties()
                       .tab(CreativeModeTab.TAB_MISC)
                       .stacksTo(64)

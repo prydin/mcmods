@@ -1,5 +1,6 @@
 package nu.rydin.mcmanure.common.events;
 
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,5 +15,6 @@ public class CommonEvents {
   public static void onEntityCreateAttributes(final EntityAttributeCreationEvent e) {
     e.put(EntityInit.POOPING_COW.get(), PoopingCow.createAttributes().build());
     e.put(EntityInit.POOPING_CHICKEN.get(), PoopingChicken.createAttributes().build());
+    e.put(EntityInit.POOPING_HORSE.get(), AbstractHorse.createBaseHorseAttributes().build());
   }
 }

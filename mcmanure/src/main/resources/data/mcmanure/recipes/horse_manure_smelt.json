@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mcmanure:horse_manure"
+  },
+  "result": "mcmanure:dried_horse_manure",
+  "experience": 0.5,
+  "cookingTime": 60
+}
