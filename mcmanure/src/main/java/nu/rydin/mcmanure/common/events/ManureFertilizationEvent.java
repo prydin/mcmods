@@ -2,6 +2,7 @@ package nu.rydin.mcmanure.common.events;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -20,7 +21,9 @@ public class ManureFertilizationEvent {
     }
 
     final ItemStack itemstack = e.getItemStack();
-    if (!itemstack.getItem().equals(ItemsInit.COW_MANURE_ITEM.get())) {
+    final Item item = itemstack.getItem();
+    if (!(item.equals(ItemsInit.COW_MANURE_ITEM.get())
+        || item.equals(ItemsInit.HORSE_MANURE_ITEM.get()))) {
       return;
     }
 

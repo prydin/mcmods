@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "mcmanure:item/dried_cow_manure"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mcmanure:item/dried_horse_manure"
+  }
 }
