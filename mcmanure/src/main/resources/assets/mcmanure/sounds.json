@@ -25,17 +25,17 @@
     "sounds": [
       {
         "name": "mcmanure:entity/chicken_fertilize",
-        "volume": 0.5,
+        "volume": 0.1,
         "pitch": 0.5
       },
       {
         "name": "mcmanure:entity/chicken_fertilize",
-        "volume": 0.5,
+        "volume": 0.1,
         "pitch": 0.3
       },
       {
         "name": "mcmanure:entity/chicken_fertilize",
-        "volume": 0.5,
+        "volume": 0.1,
         "pitch": 0.7
       }
     ],

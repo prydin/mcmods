@@ -15,7 +15,7 @@ import net.minecraft.world.level.Level;
 
 public class PoopingChickenEgg extends EggItem {
   public PoopingChickenEgg() {
-    super(new Item.Properties().tab(CreativeModeTab.TAB_MISC));
+    super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(16));
   }
 
   @Override

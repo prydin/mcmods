@@ -1,4 +1,4 @@
-package nu.rydin.mcmanure.utils;
+package nu.rydin.explodingarrows.utils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
