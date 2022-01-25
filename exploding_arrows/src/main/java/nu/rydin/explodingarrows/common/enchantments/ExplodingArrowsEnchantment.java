@@ -37,7 +37,7 @@ public class ExplodingArrowsEnchantment extends Enchantment {
           target.getX(),
           target.getY(),
           target.getZ(),
-          (float) level,
+          ((float) level) / 4 + 1,
           Explosion.BlockInteraction.BREAK);
     }
   }

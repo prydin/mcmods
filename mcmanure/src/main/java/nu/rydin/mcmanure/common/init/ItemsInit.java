@@ -73,7 +73,7 @@ public class ItemsInit {
                       .stacksTo(64)
                       .rarity(Rarity.COMMON)));
 
-  private static final RegistryObject<EggItem> EGG =
+  public static final RegistryObject<EggItem> EGG =
       VANILLA_ITEMS.register("egg", PoopingChickenEgg::new);
 
   public static void init() {
