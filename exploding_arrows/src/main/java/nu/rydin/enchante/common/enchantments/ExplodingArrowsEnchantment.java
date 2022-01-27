@@ -1,4 +1,4 @@
-package nu.rydin.explodingarrows.common.enchantments;
+package nu.rydin.enchante.common.enchantments;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;

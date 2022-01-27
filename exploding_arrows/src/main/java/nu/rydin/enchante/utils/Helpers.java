@@ -1,4 +1,4 @@
-package nu.rydin.explodingarrows.utils;
+package nu.rydin.enchante.utils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

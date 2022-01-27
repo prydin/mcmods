@@ -1,4 +1,4 @@
-package nu.rydin.explodingarrows.common;
+package nu.rydin.enchante.common;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -6,14 +6,14 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import nu.rydin.explodingarrows.common.enchantments.ModEnchantments;
+import nu.rydin.enchante.common.enchantments.ModEnchantments;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("exploding_arrows")
+@Mod("enchante")
 public class Main {
-  public static final String MOD_ID = "exploding_arrows";
+  public static final String MOD_ID = "enchante";
   private static final Logger LOGGER = LogManager.getLogger();
 
   public Main() {
