@@ -14,16 +14,6 @@ public class ExplodingArrowsEnchantment extends Enchantment {
   }
 
   @Override
-  public int getMinCost(final int p_44580_) {
-    return 4;
-  }
-
-  @Override
-  public int getMaxCost(final int p_44582_) {
-    return 10;
-  }
-
-  @Override
   public int getMaxLevel() {
     return 4;
   }
