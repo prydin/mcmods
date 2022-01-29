@@ -21,7 +21,7 @@ public class ModEnchantments {
   public static final RegistryObject<MegaMinerEnchantment> MEGA_MINER =
       ModEnchantments.ENCHANTMENTS.register(
           "megaminer",
-          () -> new MegaMinerEnchantment(Enchantment.Rarity.RARE, EquipmentSlot.MAINHAND));
+          () -> new MegaMinerEnchantment(Enchantment.Rarity.UNCOMMON, EquipmentSlot.MAINHAND));
 
   public static void init() {
     ModEnchantments.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
