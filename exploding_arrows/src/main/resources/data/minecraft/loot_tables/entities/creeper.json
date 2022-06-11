@@ -9,13 +9,14 @@
           "name": "minecraft:book",
           "conditions": [
             {
-              "condition": "random_chance",
-              "chance": 0.001
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.01,
+              "looting_multiplier": 0.01
             }
           ],
           "functions": [
             {
-              "function": "enchant_randomly",
+              "function": "minecraft:enchant_randomly",
               "enchantments": [
                 "enchante:exploding_arrows"
               ]

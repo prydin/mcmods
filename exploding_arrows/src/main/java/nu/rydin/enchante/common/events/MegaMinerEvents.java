@@ -40,24 +40,7 @@ public class MegaMinerEvents {
     }
 
     private void onPlayerTick(final TickEvent.PlayerTickEvent e) {
-      if (pendingBlocks.isEmpty()) {
-        return;
-      }
-      if (e.player.level.isClientSide()) {
-        final BlockPos pos = pendingBlocks.getFirst();
-        final BlockState bs = e.player.level.getBlockState(pos);
-        final Block block = bs.getBlock();
-        final SoundType sound = block.getSoundType(bs, e.player.getLevel(), pos, null);
-        e.player.level.playLocalSound(
-            pos.getX(),
-            pos.getY(),
-            pos.getZ(),
-            sound.getBreakSound(),
-            SoundSource.BLOCKS,
-            1.0F,
-            1.0F,
-            true);
-      } else {
+      if (!e.player.level.isClientSide()) {
         if (pendingBlocks.isEmpty()) {
           // Should not happen. Just a safeguard.
           return;
@@ -74,7 +57,7 @@ public class MegaMinerEvents {
         final SoundType sound = block.getSoundType(bs, player.getLevel(), pos, null);
         player
             .getLevel()
-            .playSound(player, pos, sound.getBreakSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
+            .playSound(null, pos, sound.getBreakSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
         ((ServerPlayer) player).gameMode.destroyBlock(pos);
       }
     }
