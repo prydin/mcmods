@@ -1,6 +1,7 @@
 package nu.rydin.enchante.common.events;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerPlayer;
@@ -77,7 +78,7 @@ public class MegaMinerEvents {
           pendingBlocks = FeatureDetector.detectOreVein(e.getWorld(), e.getPos());
         }
       } else if (tool instanceof AxeItem) {
-        if (bs.getBlock().getRegistryName().toString().endsWith(("_log"))) {
+        if (bs.getBlock().getDescriptionId().endsWith(("_log"))) {
           pendingBlocks = FeatureDetector.detectTreeTrunk(e.getWorld(), e.getPos());
         }
       }
@@ -97,7 +98,7 @@ public class MegaMinerEvents {
     for (final Tag t : itemStack.getEnchantmentTags()) {
       final CompoundTag ct = (CompoundTag) t;
       if (ct.getString("id")
-          .equals(ModEnchantments.MEGA_MINER.get().getRegistryName().toString())) {
+          .equals(Registry.ENCHANTMENT.getKey(ModEnchantments.MEGA_MINER.get()).toString())) {
         megaMiner = true;
         break;
       }

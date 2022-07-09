@@ -26,7 +26,7 @@ public class FeatureDetector {
   public static LinkedList<BlockPos> detectTreeTrunk(
       final LevelReader world, final BlockPos start) {
     final Block trunkBlock = world.getBlockState(start).getBlock();
-    if (!trunkBlock.getRegistryName().toString().endsWith("_log")) {
+    if (!trunkBlock.getDescriptionId().endsWith("_log")) {
       // Not a log block. Definitely not a tree!
       return new LinkedList<>();
     }
@@ -91,7 +91,7 @@ public class FeatureDetector {
   }
 
   private static boolean isLeaves(final Block ref, final BlockState bs) {
-    final String name = bs.getBlock().getRegistryName().toString();
+    final String name = bs.getBlock().getDescriptionId();
     if (!name.endsWith("_leaves")) {
       return false;
     }
@@ -105,7 +105,7 @@ public class FeatureDetector {
         break; // No need to check more properties
       }
     }
-    final String refName = ref.getRegistryName().toString();
+    final String refName = ref.getDescriptionId();
     return name.startsWith(refName.substring(0, refName.length() - 5));
   }
 }
